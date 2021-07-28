@@ -1,0 +1,344 @@
+/*style.css*/
+:root{
+    --main-color:#0D378C;
+    --sub-color:#ef7b1a;
+    --sub-color2:#eef7fd;    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  color: #2D2B2B;
+  background-color: #FAF7F7;
+  font-family: "Segoe UI",sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*팝업*/
+.divpop {
+  position: absolute; 
+  z-index:999; 
+  top:100px; left: 400px;
+  width:350px; height:580px; 
+  border:1px solid black;
+  background: #fff;
+  background-image: url(./images/popup.png);
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+}
+
+.title_area {
+  font-weight:bold;
+  text-align:center;
+  width:100%;
+  background-color: var(--main-color);
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.button_area {
+  position:absolute;
+  bottom:20px;
+  left:28px;
+} 
+
+.button_area a{
+  margin-left: 10px;
+}
+
+/*header*/
+.container{
+    position: relative;
+     margin: 0 auto;  
+}
+
+header{    
+    height: 142px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 999;
+    width: 1500px;    
+}
+
+header h1{
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    font-size: 20px;
+}
+
+header nav.gnb1{
+    position: absolute;
+    right: 0px;
+    top: 7px;
+}
+
+header nav.mainGnb{
+    position: absolute;
+    right: -75px;
+    top: 70px;
+    z-index: 90;
+    width: 1000px;
+}
+
+ /*1단계 메뉴*/
+header nav.mainGnb > ul > li{
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    margin-right: 80px;
+    
+}   
+    
+
+header nav.gnb1 > ul > li{  
+  width: 300px;
+}
+
+header nav.gnb1 > ul > li a,span.line1{
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    margin: 9px;
+}
+
+header nav > ul > li a,span{
+    color: var(--main-color);
+}
+
+/*2단계 메뉴*/
+header  nav .depth2 {
+  position: absolute;
+    /* outline: 1px solid green; */
+    margin-top: 15px;
+    display: none;
+    background-color: white;
+  }
+/* css로 할 경우
+header nav > ul > li:hover > .depth2{
+      display: block;
+}
+*/
+header  nav .depth2 > li{
+  width: 8em;
+}
+
+header  nav .depth2 > li > a {
+    display: block;
+    padding: 8px;
+    font-size: 16px;
+    color: #2D2B2B;
+} /*자바로 할 경우*/
+header  nav .depth2 > li > a:hover {
+    
+    color: var(--sub-color);
+}
+
+/*메인비쥬얼*/
+.gallery{
+    height: 600px;
+    width: 1400px;
+    /* outline: 2px solid red; */
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .gallery  a > img {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+  }
+  #mainvisual > .container > .btn{
+      border: none;
+      background:none;
+      color: rgba(255,255,255,0.5);
+      font-size: 60px;
+      position: absolute;
+      
+      
+  }
+  #mainvisual > .container > .btn-next{
+      position: absolute;
+      right: 0;
+  }
+
+  /* 메인 콘텐츠 영역 */
+  #main {
+    padding-top: 95px;
+    width: 1400px;
+    /* outline: 1px solid red; */
+    margin: 0 auto;
+  }
+
+   #main > h3{
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 40px;
+    color: #2D2B2B;
+  }
+
+  #main .container {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+  }
+
+  #main .container > .col{
+    margin-right: 10px;
+  }
+
+  #main .container > .col:last-child{
+    margin: 0;
+  }
+
+#main .col a{
+  color: #2D2B2B;
+  
+}
+#main .col h4 {
+    font-size: 22px;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+#main .container2 {
+  margin-top: 105px;
+  position: relative;
+  height: 600px;
+  width: 1400px;
+  margin: 110px auto;
+}
+
+#main .container2 > .circle{
+  margin-left: 100px;
+  position: absolute;
+  top: 70px;
+}
+
+#main .container2 .contents{
+ position: absolute;
+ right: 150px;
+ text-align: center;
+ top: 100px;
+}
+
+#main .container2 .contents > h2,h3{
+  color: var(--main-color);
+  
+}
+
+#main .container2 .contents > h2{
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+
+#main .container2 .contents > h3{
+  font-size: 32px;
+  padding-bottom: 50px;
+}
+
+#main .container2 .contents > p.con {
+  font-size: 23px;
+  padding-bottom: 40px;
+  line-height: 1.6em;
+}
+
+#main .container2 .contents > p.box{
+  background-color: var(--sub-color);
+  width: 256px;
+  height: 55px;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 130px;
+  
+}
+
+#main .container2 .contents > p.box > a{
+  color: #fff;
+}
+
+@keyframes blink-effect  { 
+  50% { 
+    opacity: 0; 
+  } 
+}
+
+#main .container2 .contents > p.box:hover{
+  animation: blink-effect 1s step-end infinite;
+  background:#2D2B2B;
+}
+
+/*footer*/
+footer {
+  padding-top: 98px;
+  font-size: 13px;
+  color:var(--main-color);
+  margin: 0 auto;
+  text-align: center;
+  margin: 0 auto;
+  width: 1400px;
+}
+
+.footContainer > .sns > ul > li{
+  display: inline-block;
+}
+
+.footContainer > .sns > ul > li > a > img {
+  width: 45px;
+  height: 45px;
+}
+
+.footContainer > .sns > ul > li > a{
+  padding: 15px;
+}
+
+.footContainer > .img {
+  position: relative;
+  top: 1px;
+  bottom: -20px;
+}
+
+.footContainer > ul.footerMenu  > li{
+  display: inline-block;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.footerMenu > li > a{
+  color: #444;
+}
+.footerMenu > li > span{
+  padding: 8px;
+}
+
+.footContainer p.address{
+  font-size: 13px;
+  color: #8D8A8A;
+  line-height: 1.5em;
+}
+.footContainer p.copy{
+  margin-top: 10px;
+  color: #8D8A8A;
+}
+
+footer img.logo{
+  width: 112px;
+  height: 50px;
+}
